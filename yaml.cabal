@@ -74,6 +74,8 @@ library
     other-modules:
                      Data.Yaml.Internal
     ghc-options:     -Wall
+    if impl(ghcjs)
+      js-sources:    js/yaml.js
     c-sources:       c/helper.c
     include-dirs:    c
     if flag(no-unicode)
